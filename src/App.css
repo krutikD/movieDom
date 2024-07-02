@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 38px 2px 22px;
+  height: 80px;
+  align-items: center;
+}
+.logo{
+  font-size: 38px;
+  font-weight: 800;
+  color:rgb(190, 128, 14);
+}
+.nav-links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.nav-links>li>a{
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(201, 137, 16);
+}
+.nav-links>li>a:hover{
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.Movie-card{
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.movie-img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.movie-title{
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.posterImage{
+  height: 600px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.posterImage > img {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.posterImage__overlay {
+  position: absolute;
+  color: #fff;
+  padding: 5rem;
+  bottom: 0px;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+  opacity: 1;
+  transition: opacity .3s;
+}   
+
+.posterImage__overlay:hover {
+  opacity: 1;
+}
+.yellow{
+  color: rgb(216, 167, 5);
 }
 
-.App-link {
-  color: #61dafb;
+.posterImage__title {
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 0.4rem;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.posterImage__runtime {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
+
+.posterImage__rating {
+  margin-left: 3rem;
+}
+
+.posterImage__description {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  text-align: left;
+  width: 50%;
+}
+
